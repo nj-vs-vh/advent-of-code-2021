@@ -1,0 +1,2 @@
+number of increasing depths: 1451
+number of increasing depths (3-steps moving average): 1353
