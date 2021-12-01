@@ -1,20 +1,12 @@
 use std::fs;
 
 fn count_increases(v: &Vec<u32>) -> u32 {
-    let mut n_increases: u32 = 0;
-    for pair in v.windows(2) {
-        if pair[1] > pair[0] {
-            n_increases += 1;
-        }
-    }
-    n_increases
+    v.windows(2).map(|p| if p[1] > p[0] { 1 } else { 0 }).sum()
 }
 
 pub fn sonar() {
-    let input = fs::read_to_string("data/day1/input.txt").expect("Cannot read file!");
-
     let mut depths: Vec<u32> = Vec::new();
-
+    let input = fs::read_to_string("data/day1/input.txt").expect("Cannot read file!");
     for line in input.lines() {
         let depth: u32 = line.parse().expect("Cannot parse u32 from line");
         depths.push(depth);
