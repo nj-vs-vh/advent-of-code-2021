@@ -16,7 +16,7 @@ pub fn sonar() {
     println!("number of increasing depths: {}", count_increases(&depths));
 
     // task 2
-    let depths_ma = Vec::from_iter(depths.windows(3).map(|ds| (ds[0] + ds[1] + ds[2]) / 3));
+    let depths_ma = Vec::from_iter(depths.windows(3).map(|ds| ds.iter().sum()));
     println!(
         "number of increasing depths (3-steps moving average): {}",
         count_increases(&depths_ma)
