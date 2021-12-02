@@ -1,5 +1,6 @@
-mod day01;
+// mod day01;
+mod day02;
 
 fn main() {
-    day01::sonar()
+    day02::submarine_path();
 }

@@ -1,0 +1,2 @@
+[part1] submarine will be at (1845, 916), product is: 1690020
+[part2] submarine will be at (1845, 763408), aimed at 916, product is: 1408487760
