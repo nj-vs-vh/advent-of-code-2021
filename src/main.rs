@@ -1,5 +1,5 @@
-mod day1;
+mod day01;
 
 fn main() {
-    day1::sonar()
+    day01::sonar()
 }

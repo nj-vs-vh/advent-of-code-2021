@@ -6,7 +6,7 @@ fn count_increases(v: &Vec<u32>) -> u32 {
 
 pub fn sonar() {
     let mut depths: Vec<u32> = Vec::new();
-    let input = fs::read_to_string("data/day1/input.txt").expect("Cannot read file!");
+    let input = fs::read_to_string("data/day01/input.txt").expect("Cannot read file!");
     for line in input.lines() {
         let depth: u32 = line.parse().expect("Cannot parse u32 from line");
         depths.push(depth);
