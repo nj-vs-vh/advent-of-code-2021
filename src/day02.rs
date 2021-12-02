@@ -5,7 +5,6 @@ enum SubmarineMove {
     Up(u16),
     Forward(u16),
     Down(u16),
-    // Backward(u32),
 }
 
 impl SubmarineMove {
@@ -60,7 +59,7 @@ pub fn submarine_path() {
     let (horiz, depth) = moves
         .iter()
         .map(SubmarineMove::as_deltas_wo_aim)
-        .fold((0, 0), |acc, elem| (acc.0 + elem.0, acc.1 + elem.1));
+        .fold((0, 0), |acc, deltas| (acc.0 + deltas.0, acc.1 + deltas.1));
 
     println!(
         "[part1] submarine will be at ({}, {}), product is: {}",
@@ -69,9 +68,9 @@ pub fn submarine_path() {
         horiz * depth
     );
 
-    let (horiz, depth, aim) = moves
-        .iter()
-        .fold((0, 0, 0), |acc, elem| elem.perform(acc.0, acc.1, acc.2));
+    let (horiz, depth, aim) = moves.iter().fold((0, 0, 0), |acc, submarine_move| {
+        submarine_move.perform(acc.0, acc.1, acc.2)
+    });
     println!(
         "[part2] submarine will be at ({}, {}), aimed at {}, product is: {}",
         horiz,
