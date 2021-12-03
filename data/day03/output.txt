@@ -1,0 +1,1 @@
+gamma = 0b101110100101, epsilon = 0b10001011010, power consumption = 3320834
