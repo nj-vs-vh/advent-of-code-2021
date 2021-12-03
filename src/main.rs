@@ -1,6 +1,9 @@
 // mod day01;
-mod day02;
+// mod day02;
+mod day03;
 
 fn main() {
-    day02::submarine_path();
+    // day01::sonar();
+    // day02::submarine_path();
+    day03::gamma_epsilon_rates();
 }
