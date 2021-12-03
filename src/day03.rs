@@ -20,12 +20,7 @@ fn bit_at(input: &u32, n: usize) -> bool {
     }
 }
 
-fn filtering_rating(
-    readings: &Vec<u32>,
-    reading_len: usize,
-    cmp: fn(f32, f32) -> bool,
-    keep_if_equal: bool,
-) -> u32 {
+fn count_bits(readings: &Vec<u32>, reading_len: usize) -> Vec<u32> {
     let mut bit_counts: Vec<u32> = vec![0; reading_len];
     for reading in readings.iter() {
         for position in 0..reading_len {
@@ -34,33 +29,47 @@ fn filtering_rating(
             }
         }
     }
+    bit_counts
+}
+
+fn filtering_rating(
+    readings: &Vec<u32>,
+    reading_len: usize,
+    cmp: fn(f32, f32) -> bool,
+    keep_if_equal: bool,
+) -> u32 {
+    let mut bit_counts = count_bits(readings, reading_len);
 
     let mut mask = vec![true; readings.len()];
+    let mut mask_sum = readings.len();
 
-    fn sum_mask(m: &Vec<bool>) -> u32 {
-        m.iter().map(|b| *b as u32).sum::<u32>()
+    fn get_true_idx(m: &Vec<bool>) -> Option<usize> {
+        for (i, m) in m.iter().enumerate() {
+            if *m {
+                return Some(i);
+            }
+        }
+        return None;
     }
 
     for filtering_position in (0..reading_len).rev() {
-        if sum_mask(&mask) == 1 {
-            for (i, m) in mask.iter().enumerate() {
-                if *m {
-                    return readings[i];
-                }
-            }
+        if mask_sum == 1 {
+            return readings[get_true_idx(&mask).unwrap()];
         }
 
-        let filtering_bit_count = bit_counts[filtering_position] as f32;
-        let half_unmasked: f32 = (sum_mask(&mask) as f32) / 2.0;
-        let bit_to_keep = if filtering_bit_count == half_unmasked {
+        let ones_at_filtering_bit = bit_counts[filtering_position] as f32;
+        let half_readings_unmasked: f32 = (mask_sum as f32) / 2.0;
+
+        let bit_to_keep = if ones_at_filtering_bit == half_readings_unmasked {
             keep_if_equal
         } else {
-            cmp(filtering_bit_count, half_unmasked)
+            cmp(ones_at_filtering_bit, half_readings_unmasked)
         };
 
         for (i, reading) in readings.iter().enumerate() {
             if mask[i] && bit_at(reading, filtering_position) != bit_to_keep {
                 mask[i] = false;
+                mask_sum -= 1;
                 for position in 0..reading_len {
                     if bit_at(reading, position) {
                         bit_counts[position] -= 1;
@@ -69,12 +78,7 @@ fn filtering_rating(
             }
         }
     }
-    for (i, m) in mask.iter().enumerate() {
-        if *m {
-            return readings[i];
-        }
-    }
-    panic!("Something's wrong!");
+    return readings[get_true_idx(&mask).unwrap()];
 }
 
 pub fn submarine_ratings() {
@@ -84,14 +88,7 @@ pub fn submarine_ratings() {
     let readings_n = readings.len();
 
     // part 1
-    let mut bit_counts: Vec<u32> = vec![0; reading_len];
-    for reading in readings.iter() {
-        for position in 0..reading_len {
-            if bit_at(reading, position) {
-                bit_counts[position] += 1;
-            }
-        }
-    }
+    let bit_counts = count_bits(&readings, reading_len);
 
     let gamma = parse_u32_from_binary(&String::from_iter(bit_counts.iter().rev().map(|bc| {
         if bc > &((readings_n / 2) as u32) {
