@@ -1,9 +1,21 @@
-// mod day01;
-// mod day02;
+mod day01;
+mod day02;
 mod day03;
 
+use std::env;
+
 fn main() {
-    // day01::sonar();
-    // day02::submarine_path();
-    day03::submarine_ratings();
+    let args: Vec<String> = env::args().collect();
+    if args.len() > 1 {
+        let day_to_run: u8 = (&args[1]).parse().expect("Command line argument must be an integer");
+        match day_to_run {
+            1 => {day01::sonar();}
+            2 => {day02::submarine_path()}
+            3 => {day03::submarine_ratings()}
+            _ => {println!("Day {} is not yet implemented", day_to_run)}
+        }
+    }
+    else {
+        
+    }
 }
