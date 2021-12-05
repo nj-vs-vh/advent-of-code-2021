@@ -119,7 +119,7 @@ pub fn squid() {
         print!("{} ", drawn_number);
         for (board_idx, board) in boards.iter_mut().enumerate() {
             board.mark(&drawn_number);
-            if board.is_won() {
+            if board.is_won() && !won_boards[board_idx] {
                 won_boards[board_idx] = true;
                 let won_boards_count: usize = won_boards.iter().map(|&b| b as usize).sum();
                 if won_boards_count == 1 {
@@ -131,7 +131,6 @@ pub fn squid() {
                     println!("\n\nboard {} has won last", board_idx);
                     board.print();
                     println!("score = {}\n", board.score(&drawn_number));
-                    return;
                 }
             }
         }
