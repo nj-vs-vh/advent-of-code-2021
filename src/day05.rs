@@ -135,6 +135,7 @@ impl LineField<'_> {
         }
     }
 
+    #[allow(dead_code)]
     fn print(&self) {
         for row in &self.raster {
             for val in row {
@@ -171,7 +172,7 @@ pub fn vent_lines() {
 
     // part 1
     let field = LineField::from_lines(all_lines.iter().filter(|l| l.is_hv()).collect());
-    field.print();
+    // field.print();
     println!("number of overlapping points: {}", field.count_overlaps());
 
     // part 2
@@ -181,6 +182,6 @@ pub fn vent_lines() {
             .filter(|l| l.is_hv() || l.is_45deg())
             .collect(),
     );
-    field.print();
+    // field.print();
     println!("number of overlapping points: {}", field.count_overlaps());
 }
