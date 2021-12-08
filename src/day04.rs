@@ -28,7 +28,7 @@ impl Board {
                     if is_marked { ']' } else { ' ' }
                 );
             }
-            print!("\n");
+            println!();
         }
     }
 
