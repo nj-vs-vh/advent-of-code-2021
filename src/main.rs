@@ -4,6 +4,7 @@ mod day03;
 mod day04;
 mod day05;
 mod day06;
+mod day07;
 
 use std::env;
 
@@ -20,6 +21,7 @@ fn main() {
             4 => day04::squid(),
             5 => day05::vent_lines(),
             6 => day06::lanternfish(),
+            7 => day07::align_crabs(),
             _ => {
                 println!("Day {} is not yet implemented", day_to_run)
             }

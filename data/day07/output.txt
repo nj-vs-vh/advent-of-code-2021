@@ -1,0 +1,2 @@
+if crabs spend fuel uniformly: 347011
+if crabs spend more fuel each step: 98363777
