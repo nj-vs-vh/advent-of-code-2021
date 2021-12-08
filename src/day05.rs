@@ -148,7 +148,7 @@ impl LineField<'_> {
                     }
                 )
             }
-            print!("\n")
+            println!()
         }
     }
 

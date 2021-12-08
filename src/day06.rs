@@ -11,7 +11,7 @@ fn count_combinations(n: usize, r: usize) -> usize {
 fn count_lanterfish(t: usize) -> usize {
     let a: usize = 7;
     let b: usize = 9;
-    assert_eq!(a < b, true);
+    assert!(a < b);
     let k_l_max = (t as f32 / a as f32).ceil() as usize;
     let k_r_max = (t as f32 / b as f32).ceil() as usize;
     let mut k_lr_table = vec![vec![0; k_r_max + 1]; k_l_max + 1];
