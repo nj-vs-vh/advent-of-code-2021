@@ -5,6 +5,7 @@ mod day04;
 mod day05;
 mod day06;
 mod day07;
+mod day08;
 
 use std::env;
 
@@ -27,6 +28,7 @@ fn main() {
             }
         }
     } else {
+        day08::messed_up_displays()
         // new day will be here...
     }
 }
