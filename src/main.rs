@@ -7,6 +7,7 @@ mod day06;
 mod day07;
 mod day08;
 mod day09;
+mod day10;
 mod utils;
 
 use std::env;
@@ -26,12 +27,13 @@ fn main() {
             6 => day06::lanternfish(),
             7 => day07::align_crabs(),
             8 => day08::messed_up_displays(),
+            9 => day09::smoke_basin(),
+            10 => day10::brackets_parsing(),
             _ => {
                 println!("Day {} is not yet implemented", day_to_run)
             }
         }
     } else {
-        day09::smoke_basin()
         // new day will be here...
     }
 }
