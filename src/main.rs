@@ -8,6 +8,7 @@ mod day07;
 mod day08;
 mod day09;
 mod day10;
+mod day11;
 mod utils;
 
 use std::env;
@@ -34,6 +35,7 @@ fn main() {
             }
         }
     } else {
+        day11::dumbos()
         // new day will be here...
     }
 }
