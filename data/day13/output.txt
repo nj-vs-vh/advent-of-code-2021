@@ -1,0 +1,19 @@
+
+points after fold 1: 647
+points after fold 2: 541
+points after fold 3: 462
+points after fold 4: 389
+points after fold 5: 334
+points after fold 6: 277
+points after fold 7: 228
+points after fold 8: 189
+points after fold 9: 159
+points after fold 10: 134
+points after fold 11: 114
+points after fold 12: 93
+#..#.####...##.#..#...##.###...##....##
+#..#.#.......#.#..#....#.#..#.#..#....#
+####.###.....#.####....#.#..#.#.......#
+#..#.#.......#.#..#....#.###..#.......#
+#..#.#....#..#.#..#.#..#.#.#..#..#.#..#
+#..#.####..##..#..#..##..#..#..##...##.
