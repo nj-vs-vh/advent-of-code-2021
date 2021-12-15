@@ -1,5 +1,4 @@
 use super::utils::read_input;
-use itertools::iproduct;
 use std::collections::{HashMap, HashSet};
 
 #[derive(Eq, PartialEq, Hash, Clone, Copy, Debug)]
@@ -30,6 +29,7 @@ impl Map {
         Map { risks, imax, jmax }
     }
 
+    #[allow(dead_code)]
     fn print(&self) {
         for i in 0..=self.imax {
             for j in 0..=self.jmax {
@@ -79,6 +79,7 @@ impl Node {
         res
     }
 
+    #[allow(dead_code)]
     fn print(&self) {
         println!("{}, {}", self.i, self.j);
     }
