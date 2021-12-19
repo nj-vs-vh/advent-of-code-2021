@@ -16,6 +16,7 @@ mod day15;
 mod day16;
 mod day17;
 mod day18;
+mod day19;
 mod utils;
 
 use std::env;
@@ -44,12 +45,13 @@ fn main() {
             15 => day15::chitons(),
             16 => day16::bits_decoding(),
             17 => day17::probe_launch(),
+            18 => day18::snailfish_math(),
             _ => {
                 println!("Day {} is not yet implemented", day_to_run)
             }
         }
     } else {
-        day18::snailfish_math();
+        day19::beacons();
         // new day will be here...
     }
 }
