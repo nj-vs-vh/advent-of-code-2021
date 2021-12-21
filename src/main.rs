@@ -18,6 +18,7 @@ mod day17;
 mod day18;
 mod day19;
 mod day20;
+mod day21;
 mod utils;
 
 use std::env;
@@ -48,12 +49,13 @@ fn main() {
             17 => day17::probe_launch(),
             18 => day18::snailfish_math(),
             19 => day19::beacons(),
+            20 => day20::image_enhancement(),
             _ => {
                 println!("Day {} is not yet implemented", day_to_run)
             }
         }
     } else {
-        day20::image_enhancement();
+        day21::dirac_die();
         // new day will be here...
     }
 }
