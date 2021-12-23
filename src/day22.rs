@@ -63,6 +63,7 @@ fn to_bound_sequence(cuboids: &Vec<[i32; 6]>, dim: usize) -> Vec<CuboidBound> {
     cbs
 }
 
+#[allow(dead_code)]
 fn clamp_cuboid(c: &[i32; 6], max_abs: i32) -> [i32; 6] {
     let clamp = |v: i32, add: i32| {
         if v > max_abs {
