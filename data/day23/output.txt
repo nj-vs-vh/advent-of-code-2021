@@ -1,0 +1,211 @@
+
+...........
+  A B C D  
+  A B C D  
+  A B C D  
+  A B C D  
+
+A..........
+    B C D  
+  A B C D  
+  A B C D  
+  A B C D  
+
+AA.........
+    B C D  
+    B C D  
+  A B C D  
+  A B C D  
+
+AA........A
+    B C D  
+    B C D  
+    B C D  
+  A B C D  
+
+AA.......AA
+    B C D  
+    B C D  
+    B C D  
+    B C D  
+
+AA.....C.AA
+    B   D  
+    B C D  
+    B C D  
+    B C D  
+
+AA.C...C.AA
+    B   D  
+    B   D  
+    B C D  
+    B C D  
+
+AA.C.....AA
+    B   D  
+    B C D  
+    B C D  
+    B C D  
+
+AA.......AA
+    B   D  
+    B C D  
+    B C D  
+  C B C D  
+
+AA.....D.AA
+    B      
+    B C D  
+    B C D  
+  C B C D  
+
+AA.......AA
+    B      
+    B C D  
+  D B C D  
+  C B C D  
+
+AA.....D.AA
+    B      
+    B C    
+  D B C D  
+  C B C D  
+
+AA.......AA
+    B      
+  D B C    
+  D B C D  
+  C B C D  
+
+AA.....D.AA
+    B      
+  D B C    
+  D B C    
+  C B C D  
+
+AA.......AA
+  D B      
+  D B C    
+  D B C    
+  C B C D  
+
+AA.D.....AA
+  D B      
+  D B C    
+  D B C    
+  C B C    
+
+AA.D.B...AA
+  D        
+  D B C    
+  D B C    
+  C B C    
+
+AA.D.....AA
+  D        
+  D B C    
+  D B C    
+  C B C B  
+
+AA.D.C...AA
+  D        
+  D B      
+  D B C    
+  C B C B  
+
+AA.D.....AA
+  D        
+  D B      
+  D B C C  
+  C B C B  
+
+AA.D......A
+  D        
+  D B   A  
+  D B C C  
+  C B C B  
+
+AA.D.....CA
+  D        
+  D B   A  
+  D B   C  
+  C B C B  
+
+AA.......CA
+  D     D  
+  D B   A  
+  D B   C  
+  C B C B  
+
+AA.B.....CA
+  D     D  
+  D     A  
+  D B   C  
+  C B C B  
+
+AA.B...C.CA
+  D     D  
+  D     A  
+  D B   C  
+  C B   B  
+
+AA.....C.CA
+  D     D  
+  D     A  
+  D B   C  
+  C B B B  
+
+A......C.CA
+  D     D  
+  D     A  
+  D B A C  
+  C B B B  
+
+AB.....C.CA
+  D     D  
+  D     A  
+  D   A C  
+  C B B B  
+
+A......C.CA
+  D     D  
+  D   B A  
+  D   A C  
+  C B B B  
+
+A....B.C.CA
+  D     D  
+  D   B A  
+  D   A C  
+  C   B B  
+
+.....B.C.CA
+  D     D  
+  D   B A  
+  D   A C  
+  C A B B  
+
+.......C.CA
+  D     D  
+  D   B A  
+  D B A C  
+  C A B B  
+
+.........CA
+  D   C D  
+  D   B A  
+  D B A C  
+  C A B B  
+
+..........A
+  D   C D  
+  D C B A  
+  D B A C  
+  C A B B  
+
+...........
+  D A C D  
+  D C B A  
+  D B A C  
+  C A B B  
+the most efficient path takes 48984
