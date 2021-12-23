@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 itertools = "0.10.2"
 bit-set = "0.5.2"
+priority-queue = "1.2.1"

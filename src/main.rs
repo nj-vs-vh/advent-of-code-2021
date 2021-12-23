@@ -20,6 +20,7 @@ mod day19;
 mod day20;
 mod day21;
 mod day22;
+mod day23;
 mod utils;
 
 use std::env;
@@ -52,12 +53,13 @@ fn main() {
             19 => day19::beacons(),
             20 => day20::image_enhancement(),
             21 => day21::dirac_die(),
+            22 => day22::reactor_cubes(),
             _ => {
                 println!("Day {} is not yet implemented", day_to_run)
             }
         }
     } else {
-        day22::reactor_cubes();
+        day23::amphipod_rooms();
         // new day will be here...
     }
 }
