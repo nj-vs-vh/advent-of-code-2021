@@ -87,6 +87,7 @@ impl Line {
 }
 
 #[derive(Debug, Clone)]
+#[allow(dead_code)]
 struct LineField<'a> {
     lines: Vec<&'a Line>,
     raster: Vec<Vec<u32>>,
