@@ -23,6 +23,7 @@ mod day21;
 mod day22;
 mod day23;
 mod day24;
+mod day25;
 mod utils;
 
 use std::env;
@@ -57,12 +58,13 @@ fn main() {
             21 => day21::dirac_die(),
             22 => day22::reactor_cubes(),
             23 => day23::amphipod_rooms(),
+            24 => day24::arithmetic_logic_unit(),
             _ => {
                 println!("Day {} is not yet implemented", day_to_run)
             }
         }
     } else {
-        day24::arithmetic_logic_unit();
+        day25::cucumbers_drift();
         // new day will be here...
     }
 }
